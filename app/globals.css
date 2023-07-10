@@ -1,0 +1,78 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.custom-shadow {
+  box-shadow: rgb(255, 255, 255) 0px 1px 3px 0px, rgb(254, 254, 254) 0px 1px 2px 0px;
+}
+
+.sec {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 3s ease-in-out;
+}
+
+.slide-in {
+  opacity: 0.3;
+  animation: slideInAnimation 40s forwards;
+}
+
+@keyframes slideInAnimation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseAnimation {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.bg-pulse {
+  animation: pulseAnimation 10s linear infinite;
+}
+
+.securitylayer-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  position: absolute;
+  object-fit: cover;
+}
